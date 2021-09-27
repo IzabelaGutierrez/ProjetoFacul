@@ -1,144 +1,567 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>LivrOnline</title>
-	<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
+        <title>LivrOnline</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="eCommerce HTML Template Free Download" name="keywords">
+        <meta content="eCommerce HTML Template Free Download" name="description">
 
-	<!-- Normalizez CSS -->
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
 
-	<!-- Estilo customizado -->
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
 
-	<!--[if lt IE 9]>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-	<![endif]-->
+        <!-- CSS Lib -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
 
-</head>
-<body>
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
 
-	<div id="container"><!-- Início container -->
-			
-		<header><!-- Início header -->
-			<div id="logo">
-				
-				<!-- <span>Nome &nbsp;</span><span id="logob">Livraria</span> -->
-			</div>
+    <body>
+        <!-- Top bar inicio -->
+        <div class="top-bar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <i class="fa fa-envelope"></i>
+                        support@livronline.com
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fa fa-phone-alt"></i>
+                        +012-345-6789
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top bar fim -->
+        
+        <!-- Nav Bar inicio -->
+        <div class="nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-			<nav><!-- Início nav -->
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Livros</a></li>
-				<li><a href="#">Bíblias</a></li>
-				<li><a href="#">Diversos</a></li>
-				<li><a href="#">Autores</a></li>
-				<li><a href="#">Editoras</a></li>
-				<li><a href="#">Feirão Infantil</a></li>
-			</ul>
-			</nav><!--/fim nav -->
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="product-list.html" class="nav-item nav-link">Livros</a>
+                            <a href="product-detail.html" class="nav-item nav-link">Detalhes</a>
+                            <a href="cart.html" class="nav-item nav-link">Carrinho</a>
+                            <a href="checkout.html" class="nav-item nav-link">Confira</a>
+                            <a href="my-account.html" class="nav-item nav-link">Minha Conta</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mais Páginas</a>
+                                <div class="dropdown-menu">
+                                    <a href="wishlist.html" class="dropdown-item">Lista de Desejos</a>
+                                    <a href="login.html" class="dropdown-item">Login & Registro</a>
+                                    <a href="contact.html" class="dropdown-item">Entre em contato conosco</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-nav ml-auto">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Minha Conta</a>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Login</a>
+                                    <a href="#" class="dropdown-item">Registro</a>s
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar fim -->      
+        
+        <!-- Bottom Bar inicio -->
+        <div class="bottom-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="img/logo2.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="search">
+                            <input type="text" placeholder="Search">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="user">
+                            <a href="wishlist.html" class="btn wishlist">
+                                <i class="fa fa-heart"></i>
+                                <span>(0)</span> <!-- Favoritos -->
+                            </a>
+                            <a href="cart.html" class="btn cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>(0)</span> <!-- Carrinho -->
+                            </a>                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Bar fim -->       
+        
+        <!-- Main Slider inicio -->
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <nav class="navbar bg-light">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i></i>Livros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i></i>Bíblias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i></i>Diversos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i></i>Autores</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i></i>Editoras</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i></i>Feirão Infantil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i></i>Classicos R$ 9,99</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i></i>+ Vendidos</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="header-slider normal-slider">
+                            <div class="header-slider-item">
+                                <img src="img/logo.jpeg" alt="Slider Image" />                               
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="header-img">
+                            <div class="img-item">
+                                <img src="img/category-1.png" />  <!-- Telegram -->                            
+                            </div>
+                            <div class="img-item">
+                                <img src="img/category-2.png" />  <!-- Telegram -->                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Slider fim -->      
+        
+        <!-- Brand inicio -->  
+        <div class="brand">
+            <div class="container-fluid">
+                <div class="brand-slider">  
+                    <div class="brand-item"><img src="img/brand-1.webp" alt=""></div>
+                    <div class="brand-item"><img src="img/brand-2.jpg" alt=""></div>
+                    <div class="brand-item"><img src="img/brand-3.jpg" alt=""></div>
+                    <div class="brand-item"><img src="img/brand-4.jpg" alt=""></div>
+                    <div class="brand-item"><img src="img/brand-5.jpg" alt=""></div>
+                    <div class="brand-item"><img src="img/brand-6.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!-- Brand fim -->      
+        
+        <!-- Feature inicio-->
+        <div class="feature">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-6 feature-col">
+                        <div class="feature-content">
+                            <i class="fab fa-cc-mastercard"></i>
+                            <h2>Pagamento seguro</h2>
+                            <p>
+                                3% de desconto à vista
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 feature-col">
+                        <div class="feature-content">
+                            <i class="fa fa-truck"></i>
+                            <h2>Entrega em todo o mundo</h2>
+                            <p>
+                                Confira nossos prazos
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 feature-col">
+                        <div class="feature-content">
+                            <i class="fa fa-sync-alt"></i>
+                            <h2>Retorno de 30 dias</h2>
+                            <p>
+                                Comprou e se arrependeu?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 feature-col">
+                        <div class="feature-content">
+                            <i class="fa fa-comments"></i>
+                            <h2>Atendimento</h2>
+                            <p>
+                                Clique aqui e obtenha ajuda
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature fim-->             
+        
+        <!-- Featured Product inicio -->
+        <div class="featured-product product">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <h1>Preços Imbatíveis</h1>
+                </div>
+                <div class="row align-items-center product-slider product-slider-4">
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div class="product-title">
+                                <a href="#">Orgulho e Preconceito</a>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-image">
+                                <a href="product-detail.html">
+                                    <img src="img/produto-1.webp" alt="Product Image">
+                                </a>
+                                <div class="product-action">
+                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <h3><span>R$</span>29,89</h3>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div class="product-title">
+                                <a href="#">HP e a Pedra Filosofal</a>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-image">
+                                <a href="product-detail.html">
+                                    <img src="img/produto-2.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-action">
+                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <h3><span>R$</span>25,90</h3>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div class="product-title">
+                                <a href="#">Os Miseráveis</a>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-image">
+                                <a href="product-detail.html">
+                                    <img src="img/produto-3.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-action">
+                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <h3><span>R$</span>97,20</h3>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div class="product-title">
+                                <a href="#">O Corcunda De Notre Dame</a>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-image">
+                                <a href="product-detail.html">
+                                    <img src="img/produto-4.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-action">
+                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <h3><span>R$</span>59,99</h3>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div class="product-title">
+                                <a href="#">Destrua este Diário</a>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-image">
+                                <a href="product-detail.html">
+                                    <img src="img/produto-5.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-action">
+                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <h3><span>R$</span>19,99</h3>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featured Product fim -->  
+            
+        <!-- Recent Product inicio -->
+        <div class="recent-product product">
+            <div class="container-fluid">
+                <div class="section-header">
+                    <h1>Pré-vendas e Lançamentos</h1>
+                </div>
+                <div class="row align-items-center product-slider product-slider-4">
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div class="product-title">
+                                <a href="#">Destruidor de Mundos</a>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-image">
+                                <a href="product-detail.html">
+                                    <img src="img/produto-6.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-action">
+                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <h3><span>R$</span>31,29</h3>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div class="product-title">
+                                <a href="#">A Cidade dos Fantasmas</a>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-image">
+                                <a href="product-detail.html">
+                                    <img src="img/produto-7.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-action">
+                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <h3><span>R$</span>34,89</h3>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div class="product-title">
+                                <a href="#">Star Wars</a>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-image">
+                                <a href="product-detail.html">
+                                    <img src="img/produto-8.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-action">
+                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <h3><span>R$</span>59,90</h3>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div class="product-title">
+                                <a href="#">Cruella</a>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-image">
+                                <a href="product-detail.html">
+                                    <img src="img/produto-9.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-action">
+                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <h3><span>R$</span>29,90</h3>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="product-item">
+                            <div class="product-title">
+                                <a href="#">Os Eleitos</a>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product-image">
+                                <a href="product-detail.html">
+                                    <img src="img/produto-10.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-action">
+                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-price">
+                                <h3><span>R$</span>49,95</h3>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Recent Product fim -->       
+                    
+        <!-- Footer Bottom inicio -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; Análise e Projeto de Sistemas II</p>
+                    </div>
 
-		</header><!--/fim header -->
-
-			<div id="principal"><!-- Início principal -->
-				
-				<div id="conteudo"><!-- Início conteudo -->
-					
-					<section>
-						<img style="width: 710px;" src="img/logo.jpeg">
-					</section>
-
-					<section id="capa">
-						<img src="img/promo.png">
-					</section>
-
-					<section id="postagem">
-						<article id="video">
-							<h3>Formas de Pagamento</h3>
-							<img src="img/pagamento.png">
-						</article>
-
-						<article id="mapa">
-							<h3>Formas de Entrega</h3>
-							<img src="img/entrega.png">
-						</article>
-
-						<article id="exposicoes">
-							<h3>Mais Vendidos</h3>
-							<ul>
-								<li><a href="">Os Assustadores insetos</a></li>
-								<li><a href="">O crânio de Luzia, a mulher mais antiga do Brasil</a></li>
-								<li><a href="">Preguiça gigante e tigre-dentes-de-sabre</a></li>
-								<li><a href="">Plantas do Brasil Central</a></li>
-								<li><a href="">Teresa Cristina: A Imperatriz Arqueologa</a></li>
-								<li><a href="">Arte com Dinossauros - Paleoarte</a></li>
-								<li><a href=""><strong>Veja todos (65)</strong></a></li>
-							</ul>
-						</article>
-
-						
-					</section>
-
-
-				</div><!--/fim conteudo -->
-
-				<aside><!-- Início aside -->
-					<section id="depoimento">
-						<img src="img/depoimento.png">
-					</section>
-
-					<section id="visita"><!-- Início seção visita -->
-						<h4>Acessar</h4>
-						<form>
-							<fieldset>
-								
-								<label>Minha Conta</label>
-								<input class="campo" type="text">
-
-								<label for="qtd">Carrinho</label>
-								<input class="campo" style="width: 30px;" type="text" id="qtd" value="1">
-
-							</fieldset>
-
-							<input class="botao" type="submit" value="Verificar disponibilidade">
-
-						</form>
-					</section><!--/fim seção visita -->
-
-					<section id="galeria">
-						<h4>Livros em Destaque</h4>
-						<a href="">
-							<img src="img/imagem1.jpg" height="93px" width="93px" alt="Descriçao da imagem1">
-						</a>
-						<a href="">
-							<img src="img/imagem2.jpg" height="93px" width="93px" alt="Descriçao da imagem2">
-						</a>
-						<a href="">
-							<img src="img/imagem3.jpg" height="93px" width="93px" alt="Descriçao da imagem3">
-						</a>
-						<a href="">
-							<img src="img/imagem4.jpg" height="93px" width="93px" alt="Descriçao da imagem4">
-						</a>
-					</section>
-
-				</aside><!--/fim aside -->
-
-				<footer>
-					<p>						
-						<a href="#">Home</a>
-						<a href="#">Livros</a>
-						<a href="#">Bíblias</a>
-						<a href="#">Diversos</a>
-						<a href="#">Autores</a>
-						<a href="#">Editoras</a>
-						<a href="#">Feirão Infantil</a>
-					</p>
-					<p>
-						2021 <a href="">LivrOnline</a> - Todos os direitos reservados.
-					</p>
-				</footer>
-			</div><!--/fim principal -->			
-
-	</div><!--/fim container -->
-
-</body>
+                    <div class="col-md-6 template-by">
+                        <p>Template By Grupo Supimpa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom fim -->       
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
